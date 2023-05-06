@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+  <head>
+    <meta charset="utf-8">
+    <title>The Hangman Game</title>
+    <link rel="stylesheet" href="juego.css">
+  </head>
+  <body>
+    <div class="main-container">
+      <h1 class="titulo">The Hangman Game</h1>
+      <h1 id="msg-final"></h1>
+      <h3 id="acierto"></h3>
+      <div class="flex-row no-wrap">
+        <h2 class="palabra" id="palabra"></h2>
+        <picture>
+          <img src="img/ahorcado_6.png" alt="" id="image6">
+          <img src="img/ahorcado_5.png" alt="" id="image5">
+          <img src="img/ahorcado_4.png" alt="" id="image4">
+          <img src="img/ahorcado_3.png" alt="" id="image3">
+          <img src="img/ahorcado_2.png" alt="" id="image2">
+          <img src="img/ahorcado_1.png" alt="" id="image1">
+          <img src="img/ahorcado_0.png" alt="" id="image0">
+        </picture>
+      </div>
+      <div class="flex-row">
+        <div class="col">
+          <h3>Attempts Remaining: <span id="intentos">6</span></h3>
+        </div>
+        <div class="col">
+          <div class="flex-row" id="botones">
+            <button id="panel"></button>
+            <button onclick="inicio()" id="reset">RESTART</button>
+            <button onclick="pista()" id="pista">HINT!</button>
+            <button id="show-message">INSTRUCTIONS</button>
+            <div id="message-box">
+              <div id="message">
+                <span class="close">&times;</span>
+                <p>This is a game to further develop your writing skills.
+                    You just have to select the letter that you think corresponds to the space and if you need help, do not hesitate to go to the Hint button!
+                    <br>Este es un juego para desarrollar aún más tus habilidades de escritura. Solo tienes que seleccionar la letra que creas que corresponde al espacio y si necesitas ayuda, ¡no dudes en ir al botón Pista!</p>
+              </div>
+            </div>
+          </div>
+          <span id="hueco-pista"></span>
+        </div>
+      </div>
+      <div class="flex-row">
+        <div class="col">
+          <div class="flex-row" id="abcdario"></div>
+        </div>
+        <div class="col"></div>
+      </div>
+    </div>
+    <script src="juego.js"></script>
+  </body>
+</html>
